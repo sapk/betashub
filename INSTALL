@@ -1,0 +1,27 @@
+BetaShub installation notes.
+
+There are two ways to install BetaShub.
+
+Using GNU Make
+==============
+
+$ sudo make install
+
+# For non root users, you can override default prefix (/usr/local)
+$ make install PREFIX=/home/$USER
+
+# If you are on a cross compilation environment:
+# (default prefix is /usr/local)
+$ make install DESTDIR=/media/rootfs
+or
+$ make install PREFIX=/opt DESTDIR=/media/rootfs
+
+
+Without GNU Make
+================
+
+# Manual installation :
+$ sudo cp src/* /usr/local/share/betashub/
+$ sudo chmod +x /usr/local/share/betashub/betashub.sh
+$ sudo ln -sf   /usr/local/share/betashub/betashub.sh /usr/local/bin/betashub
+

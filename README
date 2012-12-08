@@ -1,0 +1,67 @@
+
+                  BetaShub
+
+
+Introduction
+============
+
+BetaShub is a cli bash script that get info from betaseries to rename file and download subtiltles for tv shows
+
+
+Dependencies
+============
+
+To run betashub you will need:
+
+> A POSIX compliant operating system:
+    - GNU/Linux (Debian/Ubuntu/Fedora/Gentoo/Archlinux/...): coreutils, sed
+      (Busybox sed is working too, need version >1.10)
+    - BSD/Mac OSX: requires GNU-sed
+    - Cygwin
+> Bash (version >= 4.1). It will NOT work using Busybox or Dash (POSIX) shell.
+> Curl (version >= 7.24, with SSL support: usually required for premium account)
+
+
+Install
+=======
+See INSTALL file for details.
+
+
+Usage
+==============
+
+betashub [OPTIONS] [FILE]
+
+Global options:
+
+  -h            Show help info
+  -v            Return betashub version
+  -r            Rename file
+  -d            Download subtitles
+  -y            Force yes (no interaction)
+  -l            Select language (VO|VF) default : VO
+  -a            Force an alternate name for the file (usefull if it doesn't find with the original name)
+
+  
+Usage examples
+--------
+
+1. Only download subtitle
+$ betashub -d show.S02E05.mp4
+
+2. Only rename subtitle
+$ betashub -r show.S02E05.mp4
+
+3. Rename and Download subtitle
+$ betashub -r -d show.S02E05.mp4
+
+4. Only Download subtitle VF
+$ betashub -d -l VF show.S02E05.mp4
+
+
+Feedback
+========
+
+If you find a bug in betashub or want to propose an enhancement,
+open a new ticket here:
+http://code.google.com/p/betashub/issues/list
