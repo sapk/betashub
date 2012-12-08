@@ -41,6 +41,7 @@ dist: distdir
 
 distdir:
 	@test -d $(DISTDIR) || mkdir $(DISTDIR)
+	@mkdir -p $(DISTDIR)/src
 	@for file in $(SRCS); do \
 		cp -pf $$file $(DISTDIR)/$$file; \
 	done
@@ -49,6 +50,6 @@ distdir:
 	done
 
 distclean:
-	@rm -rf plowshare-snapshot-*
+	@rm -rf betashub-snapshot-*
 
 .PHONY: dist distclean install uninstall
